@@ -7,16 +7,16 @@ int main(){
 
     int t; cin >> t;
     while (t--){
-        int n; cin >> n;
-        vector<int> a(n);
-        unordered_map<int, int> check;
-        long long done = 0;
+        long long n, c, done=0; cin >> n;
+        unordered_map<long long,long long > check;
         for (int i=0; i<n; i++){
-            cin >> a[i];
-            done += check[a[i] - i];
-            check[a[i] - i]++;
+            cin >> c;
+            done += check[c - i];
+            check[c - i]++;
         }
         cout << done << "\n";
     }
-    return 0;
 }
+//aj-ai = j-i
+//aj-j-ai=-i
+//aj-j=ai-i
